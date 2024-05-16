@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.navbar-custom {
+  background: linear-gradient(
+    to bottom,
+    rgba(17, 18, 20, 0.75),
+    rgba(12, 13, 15, 0.9)
+);
+  box-shadow: inset 0px 1px 1px 1px rgba(255, 255, 255, 0.15);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: inherit;
+  max-width: inherit;
+  z-index: 1000;
+}
+
+.bg-peach {
+  background: #DF494C;
+}
+
+.dark-peach-btn {
+  background: #452324;
+  box-shadow: 0px 0px 5px 0px #DF494C;
+  position: absolute;
+  bottom: 5px;
+}
+
+.text-gray {
+  color: #9C9C9D;
+}
+
+.btn:hover {
+  background: #DF494C;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 300px;
+}
+
+#main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/mainbg.png);
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
+}
+
+#main > * {
+  position: relative;
+  z-index: 3;
+}
+
+#main .subtext {
+  width: 750px;
+}
+
+#company {
+  padding-top: 130px;
+  margin-bottom: 300px;
+}
+
+.inner-block {
+  width: 100%;
+  height: 100%;
+  border: 10px solid #DF494C;
+  border-radius: 25px;
+  box-shadow: 0px 0px 100px 31px #33303063;
+  background-image: url(../images/block.png);
+  background-position: top;
+  background-size: 123% auto;
+  background-repeat: no-repeat;
+}
+
+.outer-block {
+  height: 90%;
+  padding: 50px;
+  background-image: url(../images/back-stars.jpg);
+  background-position: center;
+}
+
+#products {
+  margin-bottom: 300px;
+}
+
+#products .img {
+  width: 57%;
+}
+
+#products .img img {
+  box-shadow: -20px 0px 30px -15px #ffffff32;
+  width:95%;
+}
+
+#products .text {
+  width: 43%;
+}
+
+.member img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.member {
+  box-shadow: 0px 0px 50px 2px #ffffff29, 0px 1px 1px 1px #FFFFFF1A inset;
+  background: #111214;
+  border-radius: 10px;
+}
+
+.member-orange {
+  border: 1px solid #ff000021;
+}
+
+.member-blue {
+  border: 1px solid #FFFFFF0F;
+}
+
+.text-small {
+  font-size: 12px;
+}
