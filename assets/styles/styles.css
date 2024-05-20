@@ -38,9 +38,12 @@
   background: #DF494C;
 }
 
+.shadow-glowing {
+  box-shadow: 0px 0px 5px 0px #DF494C;
+}
+
 .dark-peach-btn {
   background: #452324;
-  box-shadow: 0px 0px 5px 0px #DF494C;
   position: absolute;
   bottom: 5px;
 }
@@ -162,3 +165,13 @@
 .text-small {
   font-size: 12px;
 }
+
+.modal-body, .modal-header {
+  background-color: #111214;
+}
+
+.modal-content {
+  background-color: #111214;
+}
+
+

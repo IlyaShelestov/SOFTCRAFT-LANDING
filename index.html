@@ -13,6 +13,40 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body class="bg-black text-white">
+    <!-- CONTACT MODAL -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog shadow-glowing rounded-4">
+        <div class="modal-content">
+          <div class="modal-header rounded-4 border-bottom-0">
+            <h1 class="modal-title fs-5 w-100 text-center" id="contactModalLabel">Связаться с нами</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body rounded-4">
+            <form id="contact-form" class="d-flex flex-column align-items-center gap-3" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="4f0511c4-7df2-4c7d-9955-14f59d778687">
+              <div>
+                <label for="Name" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="Name" placeholder="Введите имя..." required>
+              </div>
+              <div>
+                <label for="Surname" class="form-label">Фамилия</label>
+                <input type="text" class="form-control" id="surname" aria-describedby="surnameHelp" name="Surname" placeholder="Введите фамилию..." required>
+              </div>
+              <div>
+                <label for="Email" class="form-label">Электронная почта</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="Email" placeholder="Введите эл. почту..." required>
+              </div>
+              <div>
+                <label for="Phone" class="form-label">Номер телефона</label>
+                <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" name="Phone" placeholder="Введите номер телефона..." required>
+              </div>
+              <input class="btn text-white bg-peach" type="submit" value="Отправить" id="submit-button" onclick="submitForm()">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NAVBAR -->
     <div class="container">
       <nav
         class="navbar p-4 my-4 border border-dark border-1 rounded-4 navbar-custom"
@@ -32,13 +66,13 @@
           </li>
         </ul>
         <button
-          class="btn text-white bg-peach d-flex flex-row gap-2 align-items-center rounded-4 py-1"
+          class="btn text-white bg-peach d-flex flex-row gap-2 align-items-center rounded-4 py-1 shadow-glowing" data-bs-toggle="modal" data-bs-target="#contactModal"
         >
           Связаться с нами <img src="./assets/images/arrow.svg" alt="" />
         </button>
       </nav>
     </div>
-
+    <!-- MAIN SECTION -->
     <section id="main" class="vh-100">
       <div class="container h-100">
         <div
@@ -51,14 +85,14 @@
             изменениям, но и активно формировать будущее
           </p>
           <button
-            class="btn text-white dark-peach-btn d-flex flex-row gap-2 align-items-center rounded-4 py-1"
+            class="btn text-white dark-peach-btn d-flex flex-row gap-2 align-items-center rounded-4 py-1" data-bs-toggle="modal" data-bs-target="#contactModal"
           >
             Связаться с нами <img src="./assets/images/arrow.svg" alt="" />
           </button>
         </div>
       </div>
     </section>
-
+    <!-- COMPANY SECTION -->
     <section id="company" class="vh-100">
       <div class="container h-100">
         <h5 class="text-center">Наши компетенции</h5>
@@ -79,7 +113,7 @@
         </div>
       </div>
     </section>
-
+    <!-- PRODUCTS SECTION -->
     <section id="products" class="vh-100">
       <div class="container h-100">
         <div class="d-flex flex-row align-items-center h-100">
@@ -98,7 +132,7 @@
               </p>
             </div>
             <a
-              href=""
+              href="http://portal.mercurio.kz/"
               class="fs-6 text-white link-underline link-underline-opacity-0"
               >Подробнее <img src="./assets/images/arrow.svg" alt=""
             /></a>
@@ -109,7 +143,7 @@
         </div>
       </div>
     </section>
-
+    <!-- TEAM SECTION -->
     <section id="team" class="mb-5">
       <div class="container">
         <div class="lightning w-100 d-flex align-items-center justify-content-center position-relative mb-5">
@@ -154,6 +188,14 @@
       </div>
     </section>
   </body>
+  <script>
+  function submitForm() {
+   var frm = document.getElementById("contact-form");
+   frm.submit();
+   frm.reset();
+   return false;
+} 
+  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
